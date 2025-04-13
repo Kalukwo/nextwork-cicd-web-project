@@ -18,7 +18,7 @@ This is a simple Java web application created primarily for deployment on an AWS
 
 ## 📁 Project Structure
 
-
+```
 nextwork-web-project/
 ├── README.md
 ├── pom.xml
@@ -29,7 +29,7 @@ nextwork-web-project/
             ├── WEB-INF
             │   └── web.xml
             └── index.jsp
-
+```
 
 - `index.jsp`: The main entry point of the web app.
 - `web.xml`: Configuration file for the web application.
