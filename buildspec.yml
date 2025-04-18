@@ -4,11 +4,16 @@ phases:
   install:
     runtime-versions:
       java: corretto8
+    commands:
+      - echo Installing Maven
+      - curl -O https://downloads.apache.org/maven/maven-3/3.8.8/binaries/apache-maven-3.8.8-bin.tar.gz
+      - tar -xzf apache-maven-3.8.8-bin.tar.gz
+      - export MAVEN_HOME=$PWD/apache-maven-3.8.8
+      - export PATH=$MAVEN_HOME/bin:$PATH
   pre_build:
     commands:
       - echo Initializing environment
       - export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain nextwork --domain-owner 533266965260 --region us-east-1 --query authorizationToken --output text`
-
   build:
     commands:
       - echo Build started on `date`
@@ -17,6 +22,7 @@ phases:
     commands:
       - echo Build completed on `date`
       - mvn -s settings.xml package
+
 artifacts:
   files:
     - target/nextwork-web-project.war
