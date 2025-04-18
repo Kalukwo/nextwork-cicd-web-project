@@ -33,7 +33,7 @@ phases:
 
 artifacts:
   files:
-    - target/nextwork-app.war
+    - target/nextwork-web-project.war
   discard-paths: no
 
 
