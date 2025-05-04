@@ -5,14 +5,9 @@
 This is a simple Java web application created primarily for deployment on an AWS EC2 instance. The project is part of a complete **CI/CD pipeline** that automates the build, test, and deployment processes using AWS services. Any changes pushed to the GitHub repository are automatically built and deployed to a production environment on EC2.
 
 ## 📘 View Project Documentation Repository
-<a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/Kalukwo/nextwork_CICD_project/main/day1/day1.pdf" target="_blank" rel="noopener noreferrer">
+<a href="https://github.com/Kalukwo/nextwork-cicd-project">
   Click here to view documentaion
-</a>(right click to open in a new tab)
-
-
-
-
-(Update the link above with your actual documentation repo URL)
+</a>(right click to open in new tab)
 
 
 ## 🎯 Project Objectives
