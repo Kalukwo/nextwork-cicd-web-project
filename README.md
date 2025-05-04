@@ -34,22 +34,24 @@ For full documentation, architecture diagrams, and pipeline visuals, visit the P
 
 ## 📁 Project Structure
 
+`
+nextwork-cicd-web-project/
 ├── appspec.yml
 ├── buildspec.yml
 ├── pom.xml
 ├── README.md
-├── scripts
-│   ├── install_dependencies.sh
-│   ├── start_server.sh
-│   └── stop_server.sh
+├── scripts/
+│   ├── install_dependencies.sh
+│   ├── start_server.sh
+│   └── stop_server.sh
 ├── settings.xml
-└── src
-    └── main
-        └── webapp
+└── src/
+    └── main/
+        └── webapp/
             ├── index.jsp
-            └── WEB-INF
-                └── web.xml
-
+            └── WEB-INF/
+                └── web.xml 
+`
 
 `index.jsp:` The main entry point of the web app.
 
