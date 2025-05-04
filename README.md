@@ -4,6 +4,12 @@
 
 This is a simple Java web application created primarily for deployment on an AWS EC2 instance. The project is part of a complete **CI/CD pipeline** that automates the build, test, and deployment processes using AWS services. Any changes pushed to the GitHub repository are automatically built and deployed to a production environment on EC2.
 
+## 📘 Project Documentation Repository
+For full documentation, architecture diagrams, and pipeline visuals, visit the Project Documentation Repository.
+
+(Update the link above with your actual documentation repo URL)
+
+
 ## 🎯 Project Objectives
 
 - Set up a Java web application hosted on an EC2 instance.
@@ -28,15 +34,40 @@ This is a simple Java web application created primarily for deployment on an AWS
 
 ## 📁 Project Structure
 
-<pre lang="markdown"> ``` nextwork-web-project/ ├── README.md ├── pom.xml └── src/ └── main/ ├── resources/ └── webapp/ ├── WEB-INF/ │ └── web.xml └── index.jsp ``` </pre>
+├── appspec.yml
+├── buildspec.yml
+├── pom.xml
+├── README.md
+├── scripts
+│   ├── install_dependencies.sh
+│   ├── start_server.sh
+│   └── stop_server.sh
+├── settings.xml
+└── src
+    └── main
+        └── webapp
+            ├── index.jsp
+            └── WEB-INF
+                └── web.xml
 
-markdown
-Copy
-Edit
 
-- `index.jsp`: The main entry point of the web app.
-- `web.xml`: Configuration file for the web application.
-- `pom.xml`: Maven build file specifying project dependencies.
+`index.jsp:` The main entry point of the web app.
+
+`web.xml:` Configuration file for the web application.
+
+`pom.xml:` Maven build file specifying project dependencies.
+
+`appspec.yml:` Defines how CodeDeploy manages the deployment on EC2.
+
+`buildspec.yml:` Contains build commands and artifact instructions for CodeBuild.
+
+`scripts/install_dependencies.sh:` Installs necessary packages and dependencies on the EC2 instance.
+
+`scripts/start_server.sh:` Starts the application server after deployment.
+
+`scripts/stop_server.sh:` Stops the application server before a new deployment.
+
+`settings.xml:` Maven settings file, used for configuring repositories like AWS CodeArtifact.
 
 ## 🚀 CI/CD Pipeline Overview
 
@@ -53,47 +84,8 @@ Edit
 5. **Production**
    - Changes are reflected live on the website hosted on EC2.
 
-## 🖥️ Manual Deployment (Alternative Summary)
 
-If manually deploying to EC2:
-
-1. **Launch EC2 Instance**
-   - Amazon Linux 2 or Ubuntu, with port 8080 open.
-
-2. **Install Java and Maven**
-   ```bash
-   sudo yum install java-1.8.0-amazon-corretto
-   sudo yum install maven
-Install and Configure Tomcat
-
-Download and extract Apache Tomcat.
-
-Deploy your WAR file or copy the project files into webapps.
-
-Clone or Push the GitHub Repo
-
-Push existing code:
-
-bash
-Copy
-Edit
-git init
-git remote add origin https://github.com/Kalukwo/nextwork-web-project.git
-git add .
-git commit -m "Initial commit"
-git push -u origin main
-Or clone:
-
-bash
-Copy
-Edit
-git clone https://github.com/Kalukwo/nextwork-web-project.git
-📘 Project Documentation Repository
-For full documentation, architecture diagrams, and pipeline visuals, visit the Project Documentation Repository.
-
-(Update the link above with your actual documentation repo URL)
-
-📌 Notes
+## 📌 Notes
 This project is for learning and demonstration purposes only.
 
 No business logic or database layer is included.
