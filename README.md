@@ -28,16 +28,7 @@ This is a simple Java web application created primarily for deployment on an AWS
 
 ## 📁 Project Structure
 
-nextwork-web-project/
-├── README.md
-├── pom.xml
-└── src
-└── main
-├── resources
-└── webapp
-├── WEB-INF
-│ └── web.xml
-└── index.jsp
+<pre lang="markdown"> ``` nextwork-web-project/ ├── README.md ├── pom.xml └── src/ └── main/ ├── resources/ └── webapp/ ├── WEB-INF/ │ └── web.xml └── index.jsp ``` </pre>
 
 markdown
 Copy
